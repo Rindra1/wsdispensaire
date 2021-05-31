@@ -1,0 +1,29 @@
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AccueilCaissier.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.Connexion.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.Properties.Resources.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.csproj.GenerateResource.Cache
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AccueilDocteur.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AjoutOrdonnance.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.exe.config
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.exe
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.NouveauPatient.resources
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.exe
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.csprojResolveAssemblyReference.cache
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.exe.config
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.exe
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.exe
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\bin\Debug\Dispensaire.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.csprojResolveAssemblyReference.cache
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AccueilCaissier.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AccueilDocteur.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.AjoutOrdonnance.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.Connexion.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.NouveauPatient.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.Properties.Resources.resources
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire\Dispensaire\obj\Debug\Dispensaire.csproj.GenerateResource.Cache
+D:\Dispensaire\Nouveau dossier\Dispensaire\Dispensaire\bin\Debug\Dispensaire.exe.config
+D:\Dispensaire\Nouveau dossier\Dispensaire\Dispensaire\obj\Debug\Dispensaire.exe
+D:\Dispensaire\Nouveau dossier\Dispensaire\Dispensaire\obj\Debug\Dispensaire.pdb

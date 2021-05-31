@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="addOrdonnance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ord" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Ordonnance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_ordonnance_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_date_ajout" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="medicament" type="tns:ArrayOfMedicament" />
+          <s:element minOccurs="0" maxOccurs="1" name="Medecin_Traitant" type="tns:Personne" />
+          <s:element minOccurs="0" maxOccurs="1" name="Patient" type="tns:Personne" />
+          <s:element minOccurs="0" maxOccurs="1" name="Caissier" type="tns:Personne" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pharmacien" type="tns:Personne" />
+          <s:element minOccurs="0" maxOccurs="1" name="Infirmier" type="tns:Personne" />
+          <s:element minOccurs="1" maxOccurs="1" name="_taux_arterien" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="_pouls" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="_poids" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="_tension" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="_symptome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_tache_en_cours" type="tns:Parametre_Valeur" />
+          <s:element minOccurs="0" maxOccurs="1" name="_tache_suivant_attendu" type="tns:Parametre_Valeur" />
+          <s:element minOccurs="1" maxOccurs="1" name="_prix_total" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMedicament">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Medicament" nillable="true" type="tns:Medicament" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Medicament">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_medicament_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="categorie_medicament" type="tns:Parametre_Valeur" />
+          <s:element minOccurs="0" maxOccurs="1" name="_medicament_nom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_medicament_description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="quantite" type="tns:Quantite" />
+          <s:element minOccurs="1" maxOccurs="1" name="_quantite_acheter" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_prix_acheter" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Parametre_Valeur">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_parametre_valeur_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="parametre" type="tns:Parametre" />
+          <s:element minOccurs="0" maxOccurs="1" name="_parametre_valeur_valeur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_parametre_valeur_description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_parametre_valeur_code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_parametre_valeur_numero" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Parametre">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_parametre_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_parametre_nom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="parametre_valeur" type="tns:ArrayOfParametre_Valeur" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfParametre_Valeur">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Parametre_Valeur" nillable="true" type="tns:Parametre_Valeur" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quantite">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_quantite_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="medicament" type="tns:Medicament" />
+          <s:element minOccurs="1" maxOccurs="1" name="_nombre" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_nombre_total" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_nombre_boite" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_prix" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Personne">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_personne_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_personne_nom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_personne_prenom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sexe" type="tns:Parametre_Valeur" />
+          <s:element minOccurs="0" maxOccurs="1" name="type" type="tns:Parametre_Valeur" />
+          <s:element minOccurs="0" maxOccurs="1" name="_personne_adresse" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_personne_age" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_personne_telephone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_asthme" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="_allergie" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="antecedent" type="tns:Antecedent" />
+          <s:element minOccurs="0" maxOccurs="1" name="type_personne" type="tns:Parametre_Valeur" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Antecedent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_antecedent_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="_hospitaliser" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="_chirurgie" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="_diabete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="_hta" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="_allergie_medicament" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_diagnostique" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="_dureeT" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_traitement_anterieur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_drvdsp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addOrdonnanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addOrdonnanceResult" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPersonne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pers" type="tns:Personne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPersonneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPersonneResult" type="tns:Personne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailMedicamentOrdonnance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ord" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetailMedicamentOrdonnanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetailMedicamentOrdonnanceResult" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:Utilisateur" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Utilisateur">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_utilisateurid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="_pseudo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="personne" type="tns:Personne" />
+          <s:element minOccurs="0" maxOccurs="1" name="role" type="tns:Parametre_Valeur" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="doLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doLoginResult" type="tns:Utilisateur" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllMedicament">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllMedicamentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllMedicamentResult" type="tns:ArrayOfMedicament" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllOrdonnance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pers" type="tns:Personne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllOrdonnanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllOrdonnanceResult" type="tns:ArrayOfOrdonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrdonnance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ordonnance" nillable="true" type="tns:Ordonnance" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllPatient">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllPatientResult" type="tns:ArrayOfPersonne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPersonne">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Personne" nillable="true" type="tns:Personne" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getParametreByNom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nom" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getParametreByNomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getParametreByNomResult" type="tns:Parametre" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Prescrire">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ord" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrescrireResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrescrireResult" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechercherPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prenom" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechercherPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RechercherPatientResult" type="tns:ArrayOfPersonne" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status_suivant" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNotificationResult" type="tns:ArrayOfOrdonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTache">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ord" type="tns:Ordonnance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTacheResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="addOrdonnanceSoapIn">
+    <wsdl:part name="parameters" element="tns:addOrdonnance" />
+  </wsdl:message>
+  <wsdl:message name="addOrdonnanceSoapOut">
+    <wsdl:part name="parameters" element="tns:addOrdonnanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPersonneSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPersonne" />
+  </wsdl:message>
+  <wsdl:message name="AddPersonneSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPersonneResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetailMedicamentOrdonnanceSoapIn">
+    <wsdl:part name="parameters" element="tns:DetailMedicamentOrdonnance" />
+  </wsdl:message>
+  <wsdl:message name="DetailMedicamentOrdonnanceSoapOut">
+    <wsdl:part name="parameters" element="tns:DetailMedicamentOrdonnanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="doLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:doLogin" />
+  </wsdl:message>
+  <wsdl:message name="doLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:doLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllMedicamentSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllMedicament" />
+  </wsdl:message>
+  <wsdl:message name="getAllMedicamentSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllMedicamentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllOrdonnanceSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllOrdonnance" />
+  </wsdl:message>
+  <wsdl:message name="getAllOrdonnanceSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllOrdonnanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllPatient" />
+  </wsdl:message>
+  <wsdl:message name="getAllPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="getParametreByNomSoapIn">
+    <wsdl:part name="parameters" element="tns:getParametreByNom" />
+  </wsdl:message>
+  <wsdl:message name="getParametreByNomSoapOut">
+    <wsdl:part name="parameters" element="tns:getParametreByNomResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrescrireSoapIn">
+    <wsdl:part name="parameters" element="tns:Prescrire" />
+  </wsdl:message>
+  <wsdl:message name="PrescrireSoapOut">
+    <wsdl:part name="parameters" element="tns:PrescrireResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechercherPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:RechercherPatient" />
+  </wsdl:message>
+  <wsdl:message name="RechercherPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:RechercherPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:getNotification" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:getNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTacheSoapIn">
+    <wsdl:part name="parameters" element="tns:updateTache" />
+  </wsdl:message>
+  <wsdl:message name="updateTacheSoapOut">
+    <wsdl:part name="parameters" element="tns:updateTacheResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DispensaireSoap">
+    <wsdl:operation name="addOrdonnance">
+      <wsdl:input message="tns:addOrdonnanceSoapIn" />
+      <wsdl:output message="tns:addOrdonnanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonne">
+      <wsdl:input message="tns:AddPersonneSoapIn" />
+      <wsdl:output message="tns:AddPersonneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailMedicamentOrdonnance">
+      <wsdl:input message="tns:DetailMedicamentOrdonnanceSoapIn" />
+      <wsdl:output message="tns:DetailMedicamentOrdonnanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <wsdl:input message="tns:doLoginSoapIn" />
+      <wsdl:output message="tns:doLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMedicament">
+      <wsdl:input message="tns:getAllMedicamentSoapIn" />
+      <wsdl:output message="tns:getAllMedicamentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllOrdonnance">
+      <wsdl:input message="tns:getAllOrdonnanceSoapIn" />
+      <wsdl:output message="tns:getAllOrdonnanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllPatient">
+      <wsdl:input message="tns:getAllPatientSoapIn" />
+      <wsdl:output message="tns:getAllPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getParametreByNom">
+      <wsdl:input message="tns:getParametreByNomSoapIn" />
+      <wsdl:output message="tns:getParametreByNomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Prescrire">
+      <wsdl:input message="tns:PrescrireSoapIn" />
+      <wsdl:output message="tns:PrescrireSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercherPatient">
+      <wsdl:input message="tns:RechercherPatientSoapIn" />
+      <wsdl:output message="tns:RechercherPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNotification">
+      <wsdl:input message="tns:getNotificationSoapIn" />
+      <wsdl:output message="tns:getNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTache">
+      <wsdl:input message="tns:updateTacheSoapIn" />
+      <wsdl:output message="tns:updateTacheSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DispensaireSoap" type="tns:DispensaireSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addOrdonnance">
+      <soap:operation soapAction="http://tempuri.org/addOrdonnance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonne">
+      <soap:operation soapAction="http://tempuri.org/AddPersonne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailMedicamentOrdonnance">
+      <soap:operation soapAction="http://tempuri.org/DetailMedicamentOrdonnance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <soap:operation soapAction="http://tempuri.org/doLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMedicament">
+      <soap:operation soapAction="http://tempuri.org/getAllMedicament" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOrdonnance">
+      <soap:operation soapAction="http://tempuri.org/getAllOrdonnance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPatient">
+      <soap:operation soapAction="http://tempuri.org/getAllPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParametreByNom">
+      <soap:operation soapAction="http://tempuri.org/getParametreByNom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prescrire">
+      <soap:operation soapAction="http://tempuri.org/Prescrire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherPatient">
+      <soap:operation soapAction="http://tempuri.org/RechercherPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotification">
+      <soap:operation soapAction="http://tempuri.org/getNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTache">
+      <soap:operation soapAction="http://tempuri.org/updateTache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DispensaireSoap12" type="tns:DispensaireSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addOrdonnance">
+      <soap12:operation soapAction="http://tempuri.org/addOrdonnance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonne">
+      <soap12:operation soapAction="http://tempuri.org/AddPersonne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailMedicamentOrdonnance">
+      <soap12:operation soapAction="http://tempuri.org/DetailMedicamentOrdonnance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <soap12:operation soapAction="http://tempuri.org/doLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMedicament">
+      <soap12:operation soapAction="http://tempuri.org/getAllMedicament" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllOrdonnance">
+      <soap12:operation soapAction="http://tempuri.org/getAllOrdonnance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPatient">
+      <soap12:operation soapAction="http://tempuri.org/getAllPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParametreByNom">
+      <soap12:operation soapAction="http://tempuri.org/getParametreByNom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Prescrire">
+      <soap12:operation soapAction="http://tempuri.org/Prescrire" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherPatient">
+      <soap12:operation soapAction="http://tempuri.org/RechercherPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotification">
+      <soap12:operation soapAction="http://tempuri.org/getNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTache">
+      <soap12:operation soapAction="http://tempuri.org/updateTache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Dispensaire">
+    <wsdl:port name="DispensaireSoap" binding="tns:DispensaireSoap">
+      <soap:address location="http://192.168.43.232:8080/Dispensaire.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DispensaireSoap12" binding="tns:DispensaireSoap12">
+      <soap12:address location="http://192.168.43.232:8080/Dispensaire.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

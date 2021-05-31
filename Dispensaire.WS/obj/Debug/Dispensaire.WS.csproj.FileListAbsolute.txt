@@ -1,0 +1,38 @@
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.csprojResolveAssemblyReference.cache
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\MySql.Data.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.pdb
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.dll
+c:\users\rindra niaina\documents\visual studio 2012\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.dll.config
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\MySql.Data.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.pdb
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.csprojResolveAssemblyReference.cache
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.dll
+C:\Users\Rindra Niaina\Documents\Visual Studio 2015\Projects\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.pdb
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.dll.config
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.WS.pdb
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\MySql.Data.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BLL.pdb
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.BusinessObjects.pdb
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\bin\Dispensaire.DAL.pdb
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.csprojResolveAssemblyReference.cache
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.dll
+D:\Dispensaire\Nouveau dossier\Dispensaire.WS\Dispensaire.WS\obj\Debug\Dispensaire.WS.pdb
